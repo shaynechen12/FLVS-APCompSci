@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=gallons\ emissions\ metricconstant
+comment0.target=CO2FootprintV1(double,\ double,\ double)
+comment0.text=\n\ Create\ the\ object\ and\ set\ values\!\n
+comment1.params=
+comment1.target=void\ calcFootprint()
+comment1.text=\n\ Mutator\ method\ for\ calculating\ the\ footprint\ value\n
+comment2.params=
+comment2.target=double\ getFootprint()
+comment2.text=\n\ This\ is\ a\ method\ to\ return\ the\ metric\ value\ of\ the\ footprint\n\ @return\ the\ footprint\ in\ metric\n
+comment3.params=
+comment3.target=void\ convertMetricToPounds()
+comment3.text=\n\ Mutator\ method\ for\ converting\ the\ footprint\ from\ metric\ to\ imperial\n
+comment4.params=
+comment4.target=double\ getFootprintImperial()
+comment4.text=\n\ This\ is\ a\ method\ to\ return\ the\ imperial\ value\ of\ the\ footprint\n\ @return\ the\ footprint\ in\ imperial\n
+comment5.params=
+comment5.target=double\ getGallons()
+comment5.text=\n\ This\ is\ a\ method\ to\ return\ the\ gallons\ used\n\ @return\ the\ gallons\n
+numComments=6

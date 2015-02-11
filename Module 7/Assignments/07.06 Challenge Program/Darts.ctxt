@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=trials
+comment0.target=double[]\ average(int)
+comment1.params=
+comment1.target=void\ printQuestion()
+comment2.params=trials\ averages
+comment2.target=void\ printResults(int,\ double[])
+comment3.params=trials\ averages
+comment3.target=double\ calcaverages(int,\ double[])
+comment4.params=average
+comment4.target=void\ printEstimate(double)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

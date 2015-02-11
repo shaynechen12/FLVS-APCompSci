@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ printAndTakeInput()
+comment1.params=inFile
+comment1.target=java.lang.String\ encode(java.util.Scanner)
+numComments=2
