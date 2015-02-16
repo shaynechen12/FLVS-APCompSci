@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=height
+comment0.target=someObject(double)
+comment1.params=height
+comment1.target=double\ calcRectangleArea(double)
+numComments=2
