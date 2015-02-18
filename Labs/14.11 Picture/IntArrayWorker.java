@@ -131,16 +131,11 @@ public class IntArrayWorker
   
   public int getColTotal(int a) throws IOException
   {
-    int[] colSum =new int[2];
-    int sum = 0;
-    for (int i = 0; i < matrix.length; i++)
-    {   
-       for (int j = 0; j < 2; j++)
-       {                
-        sum += matrix[a][j];
-        colSum[j] += matrix[a][j];
-       }
-    }
-    return colSum[a];
+      int sum = 0;
+      for (int j = 0; j < 2;j++)
+      { 
+          sum += matrix[j][a];
+        }
+      return sum;
   }
 }
