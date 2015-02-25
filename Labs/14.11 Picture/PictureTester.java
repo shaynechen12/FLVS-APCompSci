@@ -51,6 +51,67 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testKeepOnlyBlue()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.keepOnlyBlue();
+      beach.explore();
+  }
+  
+  public static void testNegate()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.negate();
+      beach.explore();
+  }
+  
+  public static void testGrayscale()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.greyscale();
+      beach.explore();
+  }
+  
+  public static void testMirrorVerticalRightToLeft()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.mirrorVerticalRightToLeft();
+      beach.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.mirrorHorizontal();
+      beach.explore();
+  }
+  
+  public static void testMirrorHorizontalBotToTop()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.mirrorHorizontalBotToTop();
+      beach.explore();
+  }
+  public static void testMirrorArms()
+  {
+      Picture snowman = new Picture("snowman.jpg");
+      snowman.explore();
+      snowman.mirrorArms();
+      snowman.explore();
+  }
+  public static void testMirrorGull()
+  {
+      Picture gull = new Picture("seagull.jpg");
+      gull.explore();
+      gull.mirrorGull();
+      gull.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,7 +119,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -66,6 +127,9 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
