@@ -32,12 +32,9 @@ public class TestCandidate4
         c.add(tory);
         Candidate2 ashton = new Candidate2("Ashton Davis", 10000);
         c.add(ashton);
-        System.out.println("Results Per Candidate:");
-        System.out.println("______________________");
-        System.out.println();
+        System.out.println("Original Results:");
         for(Candidate2 t : c)
         {
-            System.out.println(t.toString());
             sum += t.getVotes();
             counter++;
         }
@@ -48,16 +45,18 @@ public class TestCandidate4
             System.out.printf("%15s                %5d                         %2f\n", 
             t.getName(), t.getVotes(), ((double)t.getVotes() / sum) * 100);
         }
-        michael.replaceName(john);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + sum);
+        System.out.println();
+        michael.replaceName("John Elmos");
         mickey.replaceVotes(2500);
         kathleen.replaceName("John Kennedy");
         kathleen.replaceVotes(8500);
-        System.out.println("\nResults Per Candidate:");
-        System.out.println("______________________");
+        sum = 0;
+        System.out.println("Changing Kathleen Turner with John Kennedy:");
         System.out.println();
         for(Candidate2 t : c)
         {
-            System.out.println(t.toString());
             sum += t.getVotes();
             counter++;
         }
@@ -67,5 +66,7 @@ public class TestCandidate4
             System.out.printf("%15s                %5d                         %2f\n", 
             t.getName(), t.getVotes(), ((double)t.getVotes() / sum) * 100);
         }
+        System.out.println();
+        System.out.println("Total number of votes in election: " + sum);
     }
 }

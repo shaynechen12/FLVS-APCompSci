@@ -1,25 +1,25 @@
 /**
- * runs the program
+ * Write a description of class TestCandidate5 here.
  * 
- * @author Gatlin Newhouse 
- * @version 2/27/2015
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class TestCandidate3
+public class TestCandidate5
 {
     public static void main(String[] args)
     {
         int sum = 0;
         int counter = 0;
-        Candidate2 john = new Candidate2("John Smith", 5000);
-        Candidate2 mary = new Candidate2("Mary Miller", 4000);
-        Candidate2 michael = new Candidate2("Michael Duffy", 6000);
-        Candidate2 tim = new Candidate2("Tim Robinson", 2500);
-        Candidate2 joe = new Candidate2("Joe Ashtony", 1800);
-        Candidate2 mickey = new Candidate2("Mickey Jones", 3000);
-        Candidate2 rebecca = new Candidate2("Rebecca Morgan", 2000);
-        Candidate2 kathleen = new Candidate2("Kathleen Turner", 8000);
-        Candidate2 tory = new Candidate2("Tory Parker", 500);
-        Candidate2 ashton = new Candidate2("Ashton Davis", 10000);
+        Candidate3 john = new Candidate3("John Smith", 5000);
+        Candidate3 mary = new Candidate3("Mary Miller", 4000);
+        Candidate3 michael = new Candidate3("Michael Duffy", 6000);
+        Candidate3 tim = new Candidate3("Tim Robinson", 2500);
+        Candidate3 joe = new Candidate3("Joe Ashtony", 1800);
+        Candidate3 mickey = new Candidate3("Mickey Jones", 3000);
+        Candidate3 rebecca = new Candidate3("Rebecca Morgan", 2000);
+        Candidate3 kathleen = new Candidate3("Kathleen Turner", 8000);
+        Candidate3 tory = new Candidate3("Tory Parker", 500);
+        Candidate3 ashton = new Candidate3("Ashton Davis", 10000);
         //original votes START
         System.out.println("Original Results:");
         System.out.println();
@@ -122,5 +122,5 @@ public class TestCandidate3
         System.out.println();
         System.out.println("Total number of votes in election: " + sum);
         //new votes END
-    }  
+    }
 }

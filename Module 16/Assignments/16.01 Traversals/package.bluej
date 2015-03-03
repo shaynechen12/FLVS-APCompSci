@@ -8,15 +8,9 @@ dependency2.type=UsesDependency
 objectbench.height=76
 objectbench.width=686
 package.editor.height=400
-<<<<<<< HEAD
 package.editor.width=588
-package.editor.x=209
-package.editor.y=227
-=======
-package.editor.width=560
-package.editor.x=350
-package.editor.y=347
->>>>>>> origin/master
+package.editor.x=163
+package.editor.y=247
 package.numDependencies=2
 package.numTargets=3
 package.showExtends=true

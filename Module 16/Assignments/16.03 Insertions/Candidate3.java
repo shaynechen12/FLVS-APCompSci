@@ -4,11 +4,11 @@
  * @author Gatlin Newhouse
  * @version 2/27/2015
  */
-public class Candidate2
+public class Candidate3
 {
     private String name;
     private int numVotes;
-    public Candidate2(String name, int numVotes){
+    public Candidate3(String name, int numVotes){
         this.name = name;
         this.numVotes = numVotes;
     }
