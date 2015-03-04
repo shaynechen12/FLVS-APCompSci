@@ -20,107 +20,98 @@ public class TestCandidate5
         Candidate3 kathleen = new Candidate3("Kathleen Turner", 8000);
         Candidate3 tory = new Candidate3("Tory Parker", 500);
         Candidate3 ashton = new Candidate3("Ashton Davis", 10000);
+        Candidate3[] candidates = new Candidate3[] {john, mary, michael, tim, joe, mickey, rebecca, kathleen, tory, ashton};
         //original votes START
         System.out.println("Original Results:");
         System.out.println();
-        System.out.println(john.toString());
-        sum += john.getVotes();
-        System.out.println(mary.toString());
-        sum += mary.getVotes();
-        System.out.println(michael.toString());
-        sum += michael.getVotes();
-        System.out.println(tim.toString());
-        sum += tim.getVotes();
-        System.out.println(joe.toString());
-        sum += joe.getVotes();
-        System.out.println(mickey.toString());
-        sum += mickey.getVotes();
-        System.out.println(rebecca.toString());
-        sum += rebecca.getVotes();
-        System.out.println(kathleen.toString());
-        sum += kathleen.getVotes();
-        System.out.println(tory.toString());
-        sum += tory.getVotes();
-        System.out.println(ashton.toString());
-        sum += ashton.getVotes();
-        System.out.println();
+        for(int i = 0; i < candidates.length; i++)
+        {
+            sum += candidates[i].getVotes();
+        }
         System.out.println("Candidate               Votes Received                      % of Total Votes");
-        System.out.printf("%15s                %5d                         %2f\n", 
-        john.getName(), john.getVotes(), ((double)john.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        mary.getName(), mary.getVotes(), ((double)mary.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        michael.getName(), michael.getVotes(), ((double)michael.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        tim.getName(), tim.getVotes(), ((double)tim.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        joe.getName(), joe.getVotes(), ((double)joe.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        mickey.getName(), mickey.getVotes(), ((double)mickey.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        rebecca.getName(), rebecca.getVotes(), ((double)rebecca.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        kathleen.getName(), kathleen.getVotes(), ((double)kathleen.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        tory.getName(), tory.getVotes(), ((double)tory.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        ashton.getName(), ashton.getVotes(), ((double)ashton.getVotes() / sum) * 100);
+        for(int i = 0; i < candidates.length; i++)
+        {
+            System.out.printf("%15s                %5d                         %2f\n", 
+            candidates[i].getName(), candidates[i].getVotes(), ((double)candidates[i].getVotes() / sum) * 100);
+        }
         System.out.println();
         System.out.println("Total number of votes in election: " + sum);
         //original votes END
         System.out.println();
-        michael.replaceName("John Elmos");
-        mickey.replaceVotes(2500);
-        kathleen.replaceName("John Kennedy");
-        kathleen.replaceVotes(8500);
+        int pos = 5;
+        String name = "Mickey Duck";
+        int votes = 14000;
+        insertPosition(candidates, pos, name, votes);
         sum = 0;
         //new votes START
-        System.out.println("Replacing Michael Duffy with John Elmos:");
-        System.out.println();
-        System.out.println(john.toString());
-        sum += john.getVotes();
-        System.out.println(mary.toString());
-        sum += mary.getVotes();
-        System.out.println(michael.toString());
-        sum += michael.getVotes();
-        System.out.println(tim.toString());
-        sum += tim.getVotes();
-        System.out.println(joe.toString());
-        sum += joe.getVotes();
-        System.out.println(mickey.toString());
-        sum += mickey.getVotes();
-        System.out.println(rebecca.toString());
-        sum += rebecca.getVotes();
-        System.out.println(kathleen.toString());
-        sum += kathleen.getVotes();
-        System.out.println(tory.toString());
-        sum += tory.getVotes();
-        System.out.println(ashton.toString());
-        sum += ashton.getVotes();
+        System.out.println("Added Mickey Duck, 14000:");
+        for(int i = 0; i < candidates.length; i++)
+        {
+            sum += candidates[i].getVotes();
+        }
         System.out.println();
         System.out.println("Candidate               Votes Received                      % of Total Votes");
-        System.out.printf("%15s                %5d                         %2f\n", 
-        john.getName(), john.getVotes(), ((double)john.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        mary.getName(), mary.getVotes(), ((double)mary.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        michael.getName(), michael.getVotes(), ((double)michael.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        tim.getName(), tim.getVotes(), ((double)tim.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        joe.getName(), joe.getVotes(), ((double)joe.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        mickey.getName(), mickey.getVotes(), ((double)mickey.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        rebecca.getName(), rebecca.getVotes(), ((double)rebecca.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        kathleen.getName(), kathleen.getVotes(), ((double)kathleen.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        tory.getName(), tory.getVotes(), ((double)tory.getVotes() / sum) * 100);
-        System.out.printf("%15s                %5d                         %2f\n", 
-        ashton.getName(), ashton.getVotes(), ((double)ashton.getVotes() / sum) * 100);
+        for(int i = 0; i < candidates.length; i++)
+        {
+            System.out.printf("%15s                %5d                         %2f\n", 
+            candidates[i].getName(), candidates[i].getVotes(), ((double)candidates[i].getVotes() / sum) * 100);
+        }
         System.out.println();
         System.out.println("Total number of votes in election: " + sum);
         //new votes END
+        System.out.println();
+        name = "Kathleen Turner";
+        votes = 100;
+        insertCandidate(candidates, name, "Donald Mouse", votes);
+        sum = 0;
+        //new new votes
+        System.out.println("Added Donald Mouse, 100:");
+        for(int i = 0; i < candidates.length; i++)
+        {
+            sum += candidates[i].getVotes();
+        }
+        System.out.println();
+        System.out.println("Candidate               Votes Received                      % of Total Votes");
+        for(int i = 0; i < candidates.length; i++)
+        {
+            System.out.printf("%15s                %5d                         %2f\n", 
+            candidates[i].getName(), candidates[i].getVotes(), ((double)candidates[i].getVotes() / sum) * 100);
+        }
+        System.out.println();
+        System.out.println("Total number of votes in election: " + sum);
+    }
+    public static void insertPosition(Candidate3[] a, int pos, String name, int votes)
+    {
+        Candidate3[] candidates = a;
+        int position = pos;
+        String n = name;
+        int v = votes;
+        for(int i=candidates.length-1;i>position;i--)
+        {
+            candidates[i] = candidates[i-1];
+        }
+        Candidate3 newperson = new Candidate3(n, votes);
+        candidates[position] = newperson;
+    }
+    public static void insertCandidate(Candidate3[] a, String name, String newperson, int votes)
+    {
+        Candidate3[] candidates = a;
+        String newb = newperson;
+        String n = name;
+        int v = votes;
+        int pos = 0;
+        Candidate3 donald = new Candidate3(newb, votes);
+        for(int i=0;i<candidates.length;i++)
+        {
+            if(candidates[i].getName().equals(n))
+            {
+                pos = i;
+            }
+        }
+        for(int i=candidates.length-1;i>pos;i--)
+        {
+            candidates[i] = candidates[i-1];
+        }
+        candidates[pos]= donald;
     }
 }

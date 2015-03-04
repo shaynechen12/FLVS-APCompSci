@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.params=args
 comment0.target=void\ main(java.lang.String[])
-numComments=1
+comment1.params=a\ pos\ name\ votes
+comment1.target=void\ insertPosition(Candidate3[],\ int,\ java.lang.String,\ int)
+comment2.params=a\ name\ newperson\ votes
+comment2.target=void\ insertCandidate(Candidate3[],\ java.lang.String,\ java.lang.String,\ int)
+numComments=3
