@@ -106,4 +106,17 @@ public class Student
     {
         name = newname;
     }
+    public void replaceQuiz(int qznum, int newscore)
+    {
+        setQuiz(qznum, newscore);
+    }
+    public void replaceStudent(String newname, int q1, int q2, int q3, int q4, int q5)
+    {
+        name = newname;
+        qz1 = q1;
+        qz2 = q2;
+        qz3 = q3;
+        qz4 = q4;
+        qz5 = q5;
+    }
 }
