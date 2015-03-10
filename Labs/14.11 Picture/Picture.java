@@ -381,6 +381,15 @@ public class Picture extends SimplePicture
               }
             }
   }
+  public void myCollage(Picture beach, Picture gull, Picture snowman,
+                        int a, int b, int c, int d, int e, int f,
+                        int g, int h, int i, int j, int k, int l,
+                        int m, int n, int o, int p, int q, int r)
+  {
+      copy(beach,b,a,f,e,d,c);
+      copy(gull,h,g,l,k,j,i);
+      copy(snowman,n,m,r,q,p,o);
+  }
   public void copy(Picture fromPic, 
                  int fromStartRow, int fromStartCol,
                  int toStartRow, int toStartCol,

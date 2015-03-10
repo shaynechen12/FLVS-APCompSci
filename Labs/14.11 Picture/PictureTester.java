@@ -9,7 +9,7 @@
 import java.util.*;
 public class PictureTester
 {
-  Scanner in = new Scanner(System.in);
+  static Scanner in = new Scanner(System.in);
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
@@ -117,7 +117,74 @@ public class PictureTester
   public static void testCopy()
   {
       Picture gull = new Picture("seagull.jpg");
+      Picture beach = new Picture("beach.jpg");
       gull.explore();
+      beach.explore();
+      System.out.println("What is the starting column for your selection?");
+      int a = in.nextInt();
+      System.out.println("What is the starting row for your selection?");
+      int b = in.nextInt();
+      System.out.println("What is the ending column for your selection?");
+      int c = in.nextInt();
+      System.out.println("What is the ending row for your selection?");
+      int d = in.nextInt();
+      System.out.println("What column would you like to paste it in?");
+      int e = in.nextInt();
+      System.out.println("What row would you like to paste it in?");
+      int f = in.nextInt();
+      beach.copy(gull, b,a,f,e,d,c);
+      beach.explore();
+  }
+  public static void testMyCollage()
+  {
+      Picture beach = new Picture("beach.jpg");
+      Picture gull = new Picture("seagull.jpg");
+      Picture snowman = new Picture("snowman.jpg");
+      beach.greyscale();
+      beach.explore();
+      gull.negate();
+      gull.mirrorGull();
+      snowman.keepOnlyBlue();
+      gull.explore();
+      snowman.explore();
+      System.out.println("What is the starting column for your beach selection?");
+      int a = in.nextInt();
+      System.out.println("What is the starting row for your beach selection?");
+      int b = in.nextInt();
+      System.out.println("What is the ending column for your beach selection?");
+      int c = in.nextInt();
+      System.out.println("What is the ending row for your beach selection?");
+      int d = in.nextInt();
+      System.out.println("What column would you like to paste it in on the beach?");
+      int e = in.nextInt();
+      System.out.println("What row would you like to paste it in on the beach?");
+      int f = in.nextInt();
+      System.out.println("What is the starting column for your gull selection?");
+      int g = in.nextInt();
+      System.out.println("What is the starting row for your gull selection?");
+      int h = in.nextInt();
+      System.out.println("What is the ending column for your gull selection?");
+      int i = in.nextInt();
+      System.out.println("What is the ending row for your gull selection?");
+      int j = in.nextInt();
+      System.out.println("What column would you like to paste it in on the beach?");
+      int k = in.nextInt();
+      System.out.println("What row would you like to paste it in on the beach?");
+      int l = in.nextInt();
+      System.out.println("What is the starting column for your snowman selection?");
+      int m = in.nextInt();
+      System.out.println("What is the starting row for your snowman selection?");
+      int n = in.nextInt();
+      System.out.println("What is the ending column for your snowman selection?");
+      int o = in.nextInt();
+      System.out.println("What is the ending row for your snowman selection?");
+      int p = in.nextInt();
+      System.out.println("What column would you like to paste it in on the beach?");
+      int q = in.nextInt();
+      System.out.println("What row would you like to paste it in on the beach?");
+      int r = in.nextInt();
+      beach.myCollage(beach,gull,snowman,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r);
+      beach.explore();
   }
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -143,6 +210,7 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
+    testMyCollage();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
