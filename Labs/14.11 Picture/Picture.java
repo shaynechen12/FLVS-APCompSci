@@ -217,6 +217,27 @@ public class Picture extends SimplePicture
           leftPixel.setColor(Color.WHITE);
       }
     }
+    //code to improve edge detection
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    Color bottomColor = null;
+    for(int col = 0; col < pixels[0].length; col++)
+    {
+        for(int row = 0; row < pixels.length-1; row++)
+        {
+            topPixel = pixels[row][col];
+            bottomPixel = pixels[row+1][col];
+            bottomColor = bottomPixel.getColor();
+            if(topPixel.colorDistance(bottomColor) > edgeDist)
+            {
+                topPixel.setColor(Color.BLACK);
+            }
+            else
+            {
+                topPixel.setColor(Color.WHITE);
+            }
+        }
+    }
   }
   
   public void keepOnlyBlue()
@@ -359,5 +380,28 @@ public class Picture extends SimplePicture
                 rightPixel.setColor(leftPixel.getColor());
               }
             }
+  }
+  public void copy(Picture fromPic, 
+                 int fromStartRow, int fromStartCol,
+                 int toStartRow, int toStartCol,
+                 int fromEndRow, int fromEndCol)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = fromStartRow, toRow = toStartRow; 
+         fromRow <= fromEndRow && toRow < toPixels.length; 
+         fromRow++, toRow++)
+    {
+      for (int fromCol = fromStartCol, toCol = toStartCol;
+           fromCol <= fromEndCol && toCol < toPixels.length;
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }   
   }
 } // this } is the end of class Picture, put all new methods before this

@@ -6,8 +6,10 @@
  * 
  * @author Barbara Ericson 
  */
+import java.util.*;
 public class PictureTester
 {
+  Scanner in = new Scanner(System.in);
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
@@ -112,6 +114,11 @@ public class PictureTester
       gull.mirrorGull();
       gull.explore();
   }
+  public static void testCopy()
+  {
+      Picture gull = new Picture("seagull.jpg");
+      gull.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -132,7 +139,7 @@ public class PictureTester
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
