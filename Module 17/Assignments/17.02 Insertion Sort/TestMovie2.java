@@ -6,7 +6,7 @@
  */
 public class TestMovie2
 {
-    public void main(String[] args)
+    public static void main(String[] args)
     {
         Movie2 muppets = new Movie2("The Muppets Take Mahattan",2001,"Columbia Tristar");
         Movie2 mulan = new Movie2("Mulan Special Edition",2004,"Disney");
@@ -23,16 +23,27 @@ public class TestMovie2
         Movie2[] newmovies = new Movie2[movies.length];
         System.out.println("Before Sorting:");
         printMovies(movies);
-        
+        System.out.println();
+        System.out.println("Sorted by Title - ascending:");
+        newmovies = sortTitles(movies,1);
+        printMovies(newmovies);
+        System.out.println();
+        System.out.println("Sorted by Year - descending:");
+        newmovies = sortYears(movies,2);
+        printMovies(newmovies);
+        System.out.println();
+        System.out.println("Sorted by Studios:");
+        newmovies = sortStudios(movies,1);
+        printMovies(newmovies);
     }
-    public void printMovies(Movie2[] a)
+    public static void printMovies(Movie2[] a)
     {
         for(int i=0;i< a.length;i++)
         {
             System.out.println(a[i].toString());
         }
     }
-    public static Movie2[] sortTitles(Movie2[] a, Movie2[] c, int b)
+    public static Movie2[] sortTitles(Movie2[] a, int b)
     {
         Movie2[] newlist = new Movie2[a.length];
         if(b==1)
