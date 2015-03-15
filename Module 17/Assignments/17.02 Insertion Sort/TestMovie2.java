@@ -1,8 +1,8 @@
 /**
- * Write a description of class TestMovie2 here.
+ * run the program
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gatlin Newhouse 
+ * @version 3/15/15
  */
 public class TestMovie2
 {
