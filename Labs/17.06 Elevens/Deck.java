@@ -11,7 +11,7 @@ public class Deck
     /**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	private ArrayList<Card> cards = new ArrayList<Card>();
 	/**
 	 * size is the number of not-yet-dealt cards.
 	 * Cards are dealt from the top (highest index) down.
@@ -75,7 +75,7 @@ public class Deck
 	public Card deal() 
 	{
 	    int a = cards.size();
-	    Card haha = cards.get(a);
+	    Card haha = cards.get(a-1);
 	    a -= 1;
 	    return haha;
 	}    
