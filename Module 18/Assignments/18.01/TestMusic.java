@@ -19,15 +19,20 @@ public class TestMusic {
 	    myMusic[7] = new Music("Let Go",2002,"Avril Lavigne");
 	    myMusic[8] = new Music("Let It Go",2007,"Tim McGraw");
 	    myMusic[9] = new Music("White Flag",2004,"Dido");
-	    printmyMusic(myMusic); 
+	    printmyMusic(myMusic);
+	    System.out.println();
 	    System.out.println("Search - Title - Let Go");
 	    findTitle(myMusic, "Let Go");
+	    System.out.println();
 	    System.out.println("Search - Title - Some Day");
 	    findTitle(myMusic, "Some Day");
+	    System.out.println();
 	    System.out.println("Search - Year - 2001");
 	    findYear(myMusic, 2001);
+	    System.out.println();
 	    System.out.println("Search - Singer - Avril Lavigne");
 	    findSinger(myMusic, "Avril Lavigne");
+	    System.out.println();
 	    System.out.println("Search - Singer - Tony Curtis");
 	    findSinger(myMusic, "Tony Curtis");
 	}
@@ -37,86 +42,70 @@ public class TestMusic {
 	    System.out.println("---------------------------------------------------");
 	    for(int i = 0; i < r.length; i++)
 	    {
-	       System.out.println(r[i]);
+	       if(r[i] != null)
+	       {
+	           System.out.println(r[i]);
+	       }
 	    }
 	}
 	public static void findSinger(Music[] r, String toFind)
 	{
-	    int found = -1;
+	    int found = 0;
 	    for(int i = 0; i < r.length; i++)
 	    {
-	       if (r[i].getsinger().compareTo(toFind) == 0)
-	           {
-	               found = i;
-	               break;
-	           }
-	           else
-	           {
-	               break;
-	           }
+	        if (r[i].getsinger() != null)
+	        {
+	            if (r[i].getsinger().compareTo(toFind) == 0)
+	            {
+	                System.out.println(r[i]);
+	                found++;
+	            }
+	        }
 	    }
-        if (found != -1)
-        {  // we have found the person
-           System.out.println("We found " + toFind + " in the library: ");
-           System.out.println(r[found]);
-        }
-        else
-        {
-           System.out.println(toFind + " is not in the library");
-        }
+	    if (found == 0)
+	    { // we have not found the location
+	        System.out.println("There are no listings for " + toFind);
+	    } 
+	    else
+	        System.out.print("There were " + found + " listings for " + toFind);
 	}
 	public static void findTitle(Music[] r, String toFind)
 	{
-	    int found = -1;
+	    int found = 0;
 	    for(int i = 0; i < r.length; i++)
 	    {
-	       if (r[i].gettitle().compareTo(toFind) == 0)
-	       {
-	               found = i;
-	               break;
-	       }
-	       else
-	       {
-	           break;
-	       }
+	        if (r[i].gettitle() != null && toFind != null) //java.lang.NullPointerException occurs here
+	        {
+	            if (r[i].gettitle().compareTo(toFind) == 0)
+	            {
+	                System.out.println(r[i]);
+	                found++;
+	            }
+	        }
 	    }
-        if (found != -1)
-        {  // we have found the person
-           System.out.println("We found " + toFind + " in the library: ");
-           System.out.println(r[found]);
-        }
-        else
-        {
-           System.out.println(toFind + " is not in the library");
-        }
+	    if (found == 0)
+	    { // we have not found the location
+	        System.out.println("There are no listings for " + toFind);
+	    } 
+	    else
+	        System.out.print("There were " + found + " listings for " + toFind);
 	}
 	public static void findYear(Music[] r, int toFind)
 	{
 	    int found = 0;
-	    System.out.println("Find results: ");
 	    for(int i = 0; i < r.length; i++)
 	    {
-	       if (r[i].getyear() == toFind)
-	           {
-	               System.out.println(r[i]);
-	               found++;
-	               if (found == 3)
-	               {
-	                  break;
-	               }
-	           }
-	           else
-	           {
-	               break;
-	           }
+	        if (r[i].getyear() == toFind)
+	        {
+	            System.out.println(r[i]);
+	            found++;
+	        }
 	    }
-        if (found == 0)
-        {  // we have not found the location
-           System.out.println(toFind + " is not in the library");
-        }  
-        else
-        {
-            System.out.println("There are no listings for " + toFind);
-        }
+	    if (found == 0)
+	    { // we have not found the location
+	        System.out.println("There are no listings for " + toFind);
+	    } 
+	    else
+	        System.out.print("There were " + found + " listings for " + toFind);
 	}	
 }

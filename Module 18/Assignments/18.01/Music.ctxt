@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=t\ l\ p
 comment0.target=Music(java.lang.String,\ int,\ java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Music\n
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Music\r\n
 comment1.params=t
 comment1.target=void\ settitle(java.lang.String)
 comment2.params=
