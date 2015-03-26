@@ -8,7 +8,7 @@
 public class TestMusic {
 	public static void main(String[] args)
 	{
-	    Music[] myMusic = new Music[15];
+	    Music[] myMusic = new Music[10];
 	    myMusic[0] = new Music("Pieces of You",1994, "Jewel");
 	    myMusic[1] = new Music("Jagged Little Pill",1995,"Alanis Morissette");
 	    myMusic[2] = new Music("What If It's You", 1995,"Reba McEntired");
@@ -65,9 +65,13 @@ public class TestMusic {
 	    if (found == 0)
 	    { // we have not found the location
 	        System.out.println("There are no listings for " + toFind);
+	        System.out.println();
 	    } 
 	    else
+	    {
 	        System.out.print("There were " + found + " listings for " + toFind);
+	        System.out.println();
+	    }
 	}
 	public static void findTitle(Music[] r, String toFind)
 	{
@@ -86,9 +90,13 @@ public class TestMusic {
 	    if (found == 0)
 	    { // we have not found the location
 	        System.out.println("There are no listings for " + toFind);
+	        System.out.println();
 	    } 
 	    else
+	    {
 	        System.out.print("There were " + found + " listings for " + toFind);
+	        System.out.println();
+	    }
 	}
 	public static void findYear(Music[] r, int toFind)
 	{
@@ -104,8 +112,12 @@ public class TestMusic {
 	    if (found == 0)
 	    { // we have not found the location
 	        System.out.println("There are no listings for " + toFind);
+	        System.out.println();
 	    } 
 	    else
+	    {
 	        System.out.print("There were " + found + " listings for " + toFind);
+	        System.out.println();
+	    }
 	}	
 }
