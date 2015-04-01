@@ -8,11 +8,11 @@ public class Shuffler
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 1;
+	private static final int SHUFFLE_COUNT = 5;
 	/**
 	 * The number of values to shuffle.
 	 */
-	private static final int VALUE_COUNT = 4;
+	private static final int VALUE_COUNT = 8;
 	/**
 	 * Tests shuffling methods.
 	 * @param args is not used.
@@ -90,6 +90,7 @@ public class Shuffler
 	public static void selectionShuffle(int[] values) 
 	{
 	    Random rnd = new Random();
+	    int[] shuffled = new int[values.length];
 	    for (int i = values.length - 1; i > 0; i--)
 	    {
 	        int index = rnd.nextInt(i + 1);
