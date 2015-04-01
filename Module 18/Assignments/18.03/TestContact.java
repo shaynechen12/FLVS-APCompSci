@@ -55,7 +55,7 @@ public class TestContact
         findByBMonth(contacts,"Mar");
         //search emails
         System.out.println("Find Email - rgoodman@hotmail.com");
-        sortEmail(contacts);
+        contacts = sortEmail(contacts);
         test = findByEmail(contacts, "rgoodman@hotmail.com");
         if (test != -1)
         {
@@ -66,7 +66,7 @@ public class TestContact
             System.out.println("Not found.");
         }
         System.out.println();System.out.println("Find Email - susieE@hotmail.com");
-        sortEmail(contacts);
+        contacts = sortEmail(contacts);
         test = findByEmail(contacts, "susieE@hotmail.com");
         if (test != -1)
         {
