@@ -8,11 +8,11 @@ public class Shuffler
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 5;
+	private static final int SHUFFLE_COUNT = 16;
 	/**
 	 * The number of values to shuffle.
 	 */
-	private static final int VALUE_COUNT = 8;
+	private static final int VALUE_COUNT = 4;
 	/**
 	 * Tests shuffling methods.
 	 * @param args is not used.
@@ -49,6 +49,11 @@ public class Shuffler
 			System.out.println();
 		}
 		System.out.println();
+		System.out.println(flip());
+		System.out.println();
+		int[] a = {1,2,3,4};
+		int[] b = {4,5,2,1};
+		arePermutations(a,b);
 	}
 	/**
 	 * Apply a "perfect shuffle" to the argument.
@@ -98,6 +103,56 @@ public class Shuffler
 	        int a = values[index];
 	        values[index] = values[i];
 	        values[i] = a;
+	    }
+	}
+	public static String flip()
+	{
+	    Random rnd = new Random();
+	    String side;
+	    int n = rnd.nextInt(3);
+	    if(n==0 | n==1)
+	    {
+	        side = "heads";
+	    }
+	    else
+	    {
+	        side = "tails";
+	    }
+	    return side;
+	}
+	public static void arePermutations(int[]a, int[] b)
+	{
+	    boolean[] perm = new boolean[a.length];
+	    if(a.length == b.length)
+	    {
+	        for(int i = 0; i < a.length; i++)
+	        {
+	            perm[i] = false;
+	            for(int j = 0; j < b.length; j++)
+	            {
+	                if(a[i] == b[j])
+	                {
+	                    perm[i] = true;
+	                }
+	            }
+	        }
+	        boolean isPerm = true;
+	        for(int i=0; i < perm.length;i++)
+	        {
+	            if(perm[i] != true)
+	            {
+	                isPerm = false;
+	                break;
+	            }
+	        }
+	        if(isPerm == true)
+	        {
+	            System.out.println("They are permutations.");
+	        }
+	        else
+	        {
+	            System.out.println("There are not permutations.");
+	        }
 	    }
 	}
 }
