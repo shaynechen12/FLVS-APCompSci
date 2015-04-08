@@ -13,6 +13,25 @@ public class Dispenser
         numberOfItem = 50;
         cost = 50;
     }
+    public Dispenser(int items, int cst)
+    {
+        if(items > 0)
+        {
+            numberOfItem = items;
+        }
+        else
+        {
+            throw new IllegalArgumentException("You must have more than zero items");
+        }
+        if(cst > 0)
+        {
+            cost = cst;
+        }
+        else
+        {
+            throw new IllegalArgumentException("They can't be free!");
+        }
+    }
     public int getCount()
     {
         return numberOfItem;
