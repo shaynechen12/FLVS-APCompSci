@@ -1,0 +1,1 @@
+//make a Tri class that implements the MenuItem interface

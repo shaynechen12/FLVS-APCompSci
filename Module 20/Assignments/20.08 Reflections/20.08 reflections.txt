@@ -1,0 +1,27 @@
+1. Think back to when you decided to take AP Computer Science.
+  - What were your reasons for taking the course?
+  - Describe what you used to think computer science was all about.
+  - What did you think you were going to learn?
+
+I took AP Computer Science because I want to become a programmer. I used to think Computer Science was about programming. I thought we were going to learn how to program.
+
+2. Consider how far you have come from your first HelloWorld.java program.
+  - Today, if someone asked you what computer science is about, what would you say?
+  - Describe some things that you learned that surprised you during the course.
+  - When you think about the future, in what ways are you better or less prepared to deal with technology issues that may affect you personally or society in general?
+
+I would tell them it's about programming java. Nothing really surprised me. I can now program and thus my resume is better for the increasingly digital world.
+
+3. Describe a lesson that was challenging or interesting. What was it about the lesson that made it memorable?
+
+The picture lab was cool especially when it came time to manipulate the pictures by either changing RGB values or cutting and pasting them.
+
+4. Describe a lesson that you would like to see changed. Make a specific recommendation to improve this lesson.
+
+All the labs need WAY more documentation. Some Activities can be ridiculously difficult - especially since this is many people's first programming course. Also this document shouldn't be required to be at least 
+two single-spaced pages as each kid's experience in this course will vary such that their answers to these questions may be different. Additionally I knew what I was getting into when I took this course so that's
+why many of my answers are short.
+
+5. What career possibilities do you see for yourself in the future? How might technology be involved?
+
+I want to program software for a living. So I'll work with computers.
